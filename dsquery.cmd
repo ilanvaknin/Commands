@@ -1,0 +1,1 @@
+dsquery * "OU=HOUsers,OU=HO-BI,DC=nsm,DC=local" -attr sAMAccountName distinguishedName -limit 5000 > AD.txt
