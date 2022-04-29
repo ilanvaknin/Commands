@@ -1,0 +1,20 @@
+# load ZIP methods
+Add-Type -Assembly System.IO.Compression.FileSystem
+
+$destPath = "C:\in\"
+
+Get-ChildItem "C:\zipfiles" -Filter *.zip | 
+Foreach-Object {
+    Write-Output $_.FullName
+
+    # open ZIP archive for reading
+    $zipFile = [IO.Compression.ZipFile]::OpenRead($_.FullName)
+ 
+    #Find all files in ZIP that match the filter (i.e. file extension)
+    #Use the Entries property to retrieve the entire collection of entries
+    $zipFile.Entries | where {$_.Name -like '*.zip'} | foreach {$FileName = $_.Name
+    [System.IO.Compression.ZipFileExtensions]::ExtractToFile($_, "$destPath\$FileName", $true)}
+ 
+    # close ZIP file
+    $zipFile.Dispose()
+}
