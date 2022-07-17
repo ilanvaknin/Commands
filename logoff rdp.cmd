@@ -1,0 +1,1 @@
+logoff $session_id /server:$server
