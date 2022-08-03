@@ -1,8 +1,8 @@
-bcp "select top(10000) * from FlexStage.dbo.HR_EVALUATIONS" queryout c:\data\HR_EVALUATIONS.txt -t"|*_*|" -c -C 65001 -S HO-SQL16TEST\BI1 -T
-bcp FlexStage.dbo.HR_EVALUATIONS in C:\data\HR_EVALUATIONS.txt -t"|*_*|" -c -C 65001 -S .\BABA -T -e C:\data\errors.txt
+bcp "select top(10000) * from dbo.mytable" queryout c:\data\export.txt -t"|*_*|" -c -C 65001 -S instancename -T
+bcp dbo.mytable in C:\data\exportexportexport.txt -t"|*_*|" -c -C 65001 -S .\BABA -T -e C:\data\errors.txt
 
-bcp FlexStage.dbo.HR_EVALUATIONS out C:\data\HR_EVALUATIONS.txt -t"|*_*|" -c -C 65001 -S HO-SQL16TEST\BI1 -T
-bcp FlexStage.dbo.HR_EVALUATIONS in  C:\data\HR_EVALUATIONS.txt -t"|*_*|" -c -C 65001 -S .\BABA -T -e C:\data\errors.txt
+bcp dbo.mytable out C:\data\exportexport.txt -t"|*_*|" -c -C 65001 -S instancename -T
+bcp dbo.mytable in  C:\data\export.txt -t"|*_*|" -c -C 65001 -S .\BABA -T -e C:\data\errors.txt
 
-bcp "select * from FlexStage.dbo.HR_EVALUATIONS where YEAR=2017 and PERSA=1600 and PERNR=242720 and POS=165" queryout C:\data\HR_EVALUATIONS.txt -t"|*_*|" -c -C 65001 -S HO-SQL16TEST\BI1 -T
-bcp FlexStage.dbo.HR_EVALUATIONS in  C:\data\HR_EVALUATIONS.txt -t"|*_*|" -c -C 65001 -S .\BABA -T -e C:\data\errors.txt
+bcp "select * from dbo.mytable where YEAR=2017 and PERSA=1600 and PERNR=242720 and POS=165" queryout C:\data\export.txt -t"|*_*|" -c -C 65001 -S instancename -T
+bcp dbo.mytable in  C:\data\export.txt -t"|*_*|" -c -C 65001 -S .\BABA -T -e C:\data\errors.txt
