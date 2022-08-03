@@ -1,9 +1,9 @@
 ﻿Write-Output ((Get-Date -format yyyy-MM-dd-HH:mm:ss) + ": Started ...");
 
 $Filepath       = 'C:\backup\scripts' # local directory to save build-scripts to
-$DataSource     = 'HO-SQLDEV\MSSQLSERVER01' # server name and instance
-$reportserver   = "HO-SQLDEV";        # SQL Server Instance.
-$reportserverdb = "ReportServer_PIBRS";        # ReportServer Database.
+$DataSource     = '' # server name and instance
+$reportserver   = "";        # SQL Server Instance.
+$reportserverdb = "";        # ReportServer Database.
 
 ###########################################################################
 #                          Script FlexMirror DB                           #
