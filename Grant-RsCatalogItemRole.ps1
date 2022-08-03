@@ -1,1 +1,1 @@
-﻿Grant-RsCatalogItemRole -ReportServerUri http://ho-sql16test/ReportServer -Identity 'NSM\ylanou' -RoleName Browser -Path /test -Verbose
+﻿Grant-RsCatalogItemRole -ReportServerUri http://servername/ReportServer -Identity 'domain\loginname' -RoleName Browser -Path /test -Verbose
